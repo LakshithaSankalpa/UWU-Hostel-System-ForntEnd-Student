@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<!-- BEGIN: Head -->
+
+<head>
+    <meta charset="utf-8">
+    <link href="dist/images/hostel-system-logo.jpg" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="LEFT4CODE">
+    <title>Student Dashboard - UWU Hostel Sysytem</title>
+    <!-- BEGIN: CSS Assets-->
+    <link rel="stylesheet" href="dist/css/app.css" />
+    <!-- END: CSS Assets-->
+</head>
+<!-- END: Head -->
+
+<body class="py-5 md:py-0">
+    <!-- BEGIN: Mobile Menu -->
+    <div class="mobile-menu md:hidden">
+        <div class="mobile-menu-bar">
+            <a href="" class="flex mr-auto">
+                <img alt="Midone - HTML Admin Template" class="w-6" src="dist/images/hostel-system-logo.jpg">
+            </a>
+            <a href="javascript:;" class="mobile-menu-toggler"> <i data-lucide="bar-chart-2"
+                    class="w-8 h-8 text-white transform -rotate-90"></i> </a>
+        </div>
+        <div class="scrollable">
+            <a href="javascript:;" class="mobile-menu-toggler"> <i data-lucide="x-circle"
+                    class="w-8 h-8 text-white transform -rotate-90"></i> </a>
+            <ul class="scrollable__content py-2">
+                <li>
+                    <a href="index.html" class="menu ">
+                        <div class="menu__icon"> <i data-lucide="home"></i> </div>
+                        <div class="menu__title"> Profile </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="appeals.html" class="menu menu--active">
+                        <div class="menu__icon"> <i data-lucide="edit"></i> </div>
+                        <div class="menu__title"> Appeals </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="hostels.html" class="menu">
+                        <div class="menu__icon"> <i data-lucide="box"></i> </div>
+                        <div class="menu__title"> Hostels </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END: Mobile Menu -->
+    <!-- BEGIN: Top Bar -->
+    <div
+        class="top-bar-boxed h-[70px] md:h-[65px] z-[51] border-b border-white/[0.08] mt-12 md:mt-0 -mx-3 sm:-mx-8 md:-mx-0 px-3 md:border-b-0 relative md:fixed md:inset-x-0 md:top-0 sm:px-8 md:px-10 md:pt-10 md:bg-gradient-to-b md:from-slate-100 md:to-transparent dark:md:from-darkmode-700">
+        <div class="h-full flex items-center">
+            <!-- BEGIN: Logo -->
+            <a href="" class="logo -intro-x hidden md:flex xl:w-[180px] block">
+                <img alt="Midone - HTML Admin Template" class="logo__image w-10 h-10 rounded-full"
+                    src="dist/images/hostel-system-logo.jpg">
+                <span class="logo__text text-white text-lg ml-3"> UWU-HMS </span>
+            </a>
+            <!-- END: Logo -->
+            <!-- BEGIN: Breadcrumb -->
+            <nav aria-label="breadcrumb" class="-intro-x h-[45px] mr-auto">
+                <ol class="breadcrumb breadcrumb-light">
+                    <li class="breadcrumb-item"><a href="#">Student</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                </ol>
+            </nav>
+            <!-- END: Breadcrumb -->
+            <!-- BEGIN: Search -->
+            <div class="intro-x relative mr-3 sm:mr-6">
+                <div class="search hidden sm:block">
+                    <input type="text" class="search__input form-control border-transparent" placeholder="Search...">
+                    <i data-lucide="search" class="search__icon dark:text-slate-500"></i>
+                </div>
+                <a class="notification notification--light sm:hidden" href=""> <i data-lucide="search"
+                        class="notification__icon dark:text-slate-500"></i> </a>
+            </div>
+            <!-- END: Search -->
+            <!-- BEGIN: Account Menu -->
+            <div class="intro-x dropdown w-8 h-8">
+                <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in scale-110"
+                    role="button" aria-expanded="false" data-tw-toggle="dropdown">
+                    <img alt="Midone - HTML Admin Template" src="dist/images/profile-5.jpg">
+                </div>
+                <div class="dropdown-menu w-56">
+                    <ul
+                        class="dropdown-content bg-primary/80 before:block before:absolute before:bg-black before:inset-0 before:rounded-md before:z-[-1] text-white">
+                        <li class="p-2">
+                            <div class="font-medium">Student Name</div>
+                            <div class="text-xs text-white/60 mt-0.5 dark:text-slate-500">Degree Name</div>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider border-white/[0.08]">
+                        </li>
+                        <li>
+                            <a href="login.html" class="dropdown-item hover:bg-white/5"> <i data-lucide="toggle-right"
+                                    class="w-4 h-4 mr-2"></i> Logout </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- END: Account Menu -->
+        </div>
+    </div>
+    <!-- END: Top Bar -->
+    <div class="flex overflow-hidden">
+        <!-- BEGIN: Side Menu -->
+        <nav class="side-nav">
+            <ul>
+                <li>
+                    <a href="index.html" class="side-menu ">
+                        <div class="side-menu__icon"> <i data-lucide="home"></i> </div>
+                        <div class="side-menu__title">
+                            Profile
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="appeals.html" class="side-menu side-menu--active">
+                        <div class="side-menu__icon"> <i data-lucide="edit"></i> </div>
+                        <div class="side-menu__title"> Appeals </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="hostels.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="box"></i> </div>
+                        <div class="side-menu__title"> Hostels </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- END: Side Menu -->
+        <!-- BEGIN: Content -->
+        <div class="content">
+            <div class="intro-y flex items-center mt-8">
+                <h2 class="text-lg font-medium mr-auto">
+                    Add New Appeal
+                </h2>
+            </div>
+            <div class="intro-y tab-content mt-5">
+                <div id="#view"" class=" tab-pane active" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <div class="grid grid-cols-12 gap-6">
+                        <div class="intro-y box col-span-12">
+                            <div
+                                class="flex items-center px-5 py-5 sm:py-3 border-b border-slate-200/60 dark:border-darkmode-400">
+                                <h2 class="font-medium text-base mr-auto">
+                                    Create Appeal
+                                </h2>
+                            </div>
+                            <div class="gap-6 p-5">
+                                <form action="">
+                                    <div class="grid grid-cols-1 sm:grid-cols-1">
+                                        <div class="relative mt-3 px-2">
+                                            <label for="inp-title" class="form-label">Title</label>
+                                            <span style="color:#ff0000">*</span>
+                                            <input id="inp-title" type="text" class="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm
+                                                            border-gray-300 rounded-md dark:bg-darkmode-800"
+                                                placeholder="Your Title">
+                                        </div>
+                                        <div class="relative mt-3 px-2">
+                                            <label for="inp-Subject" class="form-label">Subject</label>
+                                            <span style="color:#ff0000">*</span>
+                                            <input id="inp-Subject" type="text" class="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm
+                                                            border-gray-300 rounded-md dark:bg-darkmode-800"
+                                                placeholder="Subject">
+                                        </div>
+                                        <div class="relative mt-3 px-2">
+                                            <label for="inp-description" class="form-label">Description</label>
+                                            <span style="color:#ff0000">*</span>
+                                            <textarea class="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm
+                                                            border-gray-300 rounded-md dark:bg-darkmode-800"
+                                                id="editor" rows="5" placeholder="Description"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 text-left">
+
+                                    </div>
+                                    <div class="intro-y col-span-12 flex justify-end sm:justify-end mt-5">
+                                        <button class="btn btn-primary w-24 ml-2" type="submit">Send</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END: Content -->
+    </div>
+
+    <!-- BEGIN: JS Assets-->
+    <script
+        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=[" your-google-map-api"]&libraries=places"></script>
+    <script src="dist/js/app.js"></script>
+    <!-- END: JS Assets-->
+</body>
+
+</html>

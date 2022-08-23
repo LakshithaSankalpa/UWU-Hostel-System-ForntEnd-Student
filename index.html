@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<!-- BEGIN: Head -->
+
+<head>
+    <meta charset="utf-8">
+    <link href="dist/images/hostel-system-logo.jpg" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="LEFT4CODE">
+    <title>Student Dashboard - UWU Hostel Sysytem</title>
+    <!-- BEGIN: CSS Assets-->
+    <link rel="stylesheet" href="dist/css/app.css" />
+    <!-- END: CSS Assets-->
+</head>
+<!-- END: Head -->
+
+<body class="py-5 md:py-0">
+    <!-- BEGIN: Mobile Menu -->
+    <div class="mobile-menu md:hidden">
+        <div class="mobile-menu-bar">
+            <a href="" class="flex mr-auto">
+                <img alt="Midone - HTML Admin Template" class="w-6" src="dist/images/hostel-system-logo.jpg">
+            </a>
+            <a href="javascript:;" class="mobile-menu-toggler"> <i data-lucide="bar-chart-2"
+                    class="w-8 h-8 text-white transform -rotate-90"></i> </a>
+        </div>
+        <div class="scrollable">
+            <a href="javascript:;" class="mobile-menu-toggler"> <i data-lucide="x-circle"
+                    class="w-8 h-8 text-white transform -rotate-90"></i> </a>
+            <ul class="scrollable__content py-2">
+                <li>
+                    <a href="index.html" class="menu menu--active">
+                        <div class="menu__icon"> <i data-lucide="home"></i> </div>
+                        <div class="menu__title"> Profile </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="appeals.html" class="menu">
+                        <div class="menu__icon"> <i data-lucide="edit"></i> </div>
+                        <div class="menu__title"> Appeals </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="hostels.html" class="menu">
+                        <div class="menu__icon"> <i data-lucide="box"></i> </div>
+                        <div class="menu__title"> Hostels </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END: Mobile Menu -->
+    <!-- BEGIN: Top Bar -->
+    <div
+        class="top-bar-boxed h-[70px] md:h-[65px] z-[51] border-b border-white/[0.08] mt-12 md:mt-0 -mx-3 sm:-mx-8 md:-mx-0 px-3 md:border-b-0 relative md:fixed md:inset-x-0 md:top-0 sm:px-8 md:px-10 md:pt-10 md:bg-gradient-to-b md:from-slate-100 md:to-transparent dark:md:from-darkmode-700">
+        <div class="h-full flex items-center">
+            <!-- BEGIN: Logo -->
+            <a href="" class="logo -intro-x hidden md:flex xl:w-[180px] block">
+                <img alt="Midone - HTML Admin Template" class="logo__image w-10 h-10 rounded-full"
+                    src="dist/images/hostel-system-logo.jpg">
+                <span class="logo__text text-white text-lg ml-3"> UWU-HMS </span>
+            </a>
+            <!-- END: Logo -->
+            <!-- BEGIN: Breadcrumb -->
+            <nav aria-label="breadcrumb" class="-intro-x h-[45px] mr-auto">
+                <ol class="breadcrumb breadcrumb-light">
+                    <li class="breadcrumb-item"><a href="#">Student</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                </ol>
+            </nav>
+            <!-- END: Breadcrumb -->
+            <!-- BEGIN: Search -->
+            <div class="intro-x relative mr-3 sm:mr-6">
+                <div class="search hidden sm:block">
+                    <input type="text" class="search__input form-control border-transparent" placeholder="Search...">
+                    <i data-lucide="search" class="search__icon dark:text-slate-500"></i>
+                </div>
+                <a class="notification notification--light sm:hidden" href=""> <i data-lucide="search"
+                        class="notification__icon dark:text-slate-500"></i> </a>
+            </div>
+            <!-- END: Search -->
+            <!-- BEGIN: Account Menu -->
+            <div class="intro-x dropdown w-8 h-8">
+                <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in scale-110"
+                    role="button" aria-expanded="false" data-tw-toggle="dropdown">
+                    <img alt="Midone - HTML Admin Template" src="dist/images/profile-5.jpg">
+                </div>
+                <div class="dropdown-menu w-56">
+                    <ul
+                        class="dropdown-content bg-primary/80 before:block before:absolute before:bg-black before:inset-0 before:rounded-md before:z-[-1] text-white">
+                        <li class="p-2">
+                            <div class="font-medium">Student Name</div>
+                            <div class="text-xs text-white/60 mt-0.5 dark:text-slate-500">Degree Name</div>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider border-white/[0.08]">
+                        </li>
+                        <li>
+                            <a href="login.html" class="dropdown-item hover:bg-white/5"> <i data-lucide="toggle-right"
+                                    class="w-4 h-4 mr-2"></i> Logout </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- END: Account Menu -->
+        </div>
+    </div>
+    <!-- END: Top Bar -->
+    <div class="flex overflow-hidden">
+        <!-- BEGIN: Side Menu -->
+        <nav class="side-nav">
+            <ul>
+                <li>
+                    <a href="index.html" class="side-menu side-menu--active">
+                        <div class="side-menu__icon"> <i data-lucide="home"></i> </div>
+                        <div class="side-menu__title">
+                            Profile
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="appeals.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="edit"></i> </div>
+                        <div class="side-menu__title"> Appeals </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="hostels.html" class="side-menu">
+                        <div class="side-menu__icon"> <i data-lucide="box"></i> </div>
+                        <div class="side-menu__title"> Hostels </div>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        <!-- END: Side Menu -->
+        <!-- BEGIN: Content -->
+        <div class="content">
+            <div class="intro-y flex items-center mt-8">
+                <h2 class="text-lg font-medium mr-auto">
+                    Profile Layout
+                </h2>
+            </div>
+            <!-- BEGIN: Profile Info -->
+            <div class="intro-y box px-5 pt-5 mt-5">
+                <div class="flex flex-col lg:flex-row border-b border-slate-200/60 dark:border-darkmode-400 pb-5 -mx-5">
+                    <div class="flex flex-1 px-5 items-center justify-center lg:justify-start">
+                        <div class="w-20 h-20 sm:w-24 sm:h-24 flex-none lg:w-32 lg:h-32 image-fit relative">
+                            <img alt="Midone - HTML Admin Template" class="rounded-full"
+                                src="dist/images/profile-15.jpg">
+                            <div
+                                class="absolute mb-1 mr-1 flex items-center justify-center bottom-0 right-0 bg-primary rounded-full p-2">
+                                <i class="w-4 h-4 text-white" data-lucide="camera"></i>
+                            </div>
+                        </div>
+                        <div class="ml-5">
+                            <div class="w-24 sm:w-40 truncate sm:whitespace-normal font-medium text-lg">Student Name
+                            </div>
+                            <div class="text-slate-500">Student Index</div>
+                            <div class="text-slate-500">Student Degree</div>
+                            <div class="text-slate-500">University Email</div>
+                        </div>
+                    </div>
+                    <div
+                        class="mt-6 lg:mt-0 flex-1 px-5 border-l border-r border-slate-200/60 dark:border-darkmode-400 border-t lg:border-t-0 pt-5 lg:pt-0">
+                        <div class="font-medium text-center lg:text-left lg:mt-3">Hostel Details</div>
+                        <div class="flex flex-col justify-center items-center lg:items-start mt-4">
+                            <div class="truncate sm:whitespace-normal flex items-center"> <i data-lucide="check"
+                                    class="w-4 h-4 mr-2"></i> Hostel Name : Name </div>
+                            <div class="truncate sm:whitespace-normal flex items-center"> <i data-lucide="check"
+                                    class="w-4 h-4 mr-2"></i> Room Number : 00 </div>
+                            <div class="truncate sm:whitespace-normal flex items-center"> <i data-lucide="check"
+                                    class="w-4 h-4 mr-2"></i> Bed Number : 00 </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="nav nav-link-tabs flex-col sm:flex-row justify-center lg:justify-start text-center"
+                    role="tablist">
+                    <li id="info-tab" class="nav-item" role="presentation"> <a href="javascript:;"
+                            class="nav-link py-4 active" data-tw-target="#info" aria-controls="info"
+                            aria-selected="true" role="tab"> Profile Info </a> </li>
+                    <li id="privacy-tab" class="nav-item" role="presentation"> <a href="javascript:;"
+                            class="nav-link py-4" data-tw-target="#privacy" aria-selected="false" role="tab">
+                            Privacy</a> </li>
+                    <li id="hostels-tab" class="nav-item" role="presentation"> <a href="javascript:;"
+                            class="nav-link py-4" data-tw-target="#hostels" aria-selected="false" role="tab">
+                            Address </a> </li>
+                </ul>
+
+
+                <!-- END: Profile Info -->
+                <!-- info tab -->
+                <div class="intro-y tab-content mt-5">
+                    <div id="#view"" class=" tab-pane active" role="tabpanel" aria-labelledby="dashboard-tab">
+                        <div class="grid grid-cols-12 gap-6">
+                            <div class="intro-y box col-span-12">
+                                <div
+                                    class="flex items-center px-5 py-5 sm:py-3 border-b border-slate-200/60 dark:border-darkmode-400">
+                                    <h2 class="font-medium text-base mr-auto">
+                                        Profile Info
+                                    </h2>
+                                </div>
+                                <div class="gap-6 p-5">
+                                    <form action="">
+                                        <div class="grid grid-cols-2 sm:grid-cols-2">
+                                            <div class="relative mt-3 px-2">
+                                                <label for="inp-name" class="form-label">Name</label>
+                                                <span style="color:#ff0000">*</span>
+                                                <input id="inp-name" type="text" class="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm
+                                                border-gray-300 rounded-md dark:bg-darkmode-800"
+                                                    placeholder="Your Name">
+                                            </div>
+                                            <div class="relative mt-3 px-2">
+                                                <label for="inp-user_name" class="form-label">User Name</label>
+                                                <span style="color:#ff0000">*</span>
+                                                <input id="inp-user_name" type="text" class="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm
+                                                border-gray-300 rounded-md dark:bg-darkmode-800"
+                                                    placeholder="Your User Name">
+                                            </div>
+                                            <div class="relative mt-3 px-2">
+                                                <label for="inp-phone" class="form-label">Phone Number</label>
+                                                <span style="color:#ff0000">*</span>
+                                                <input id="inp-phone" type="text" class="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm
+                                                border-gray-300 rounded-md dark:bg-darkmode-800"
+                                                    placeholder="Your Phone Number"
+                                                    onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                                            </div>
+                                            <div class="relative mt-3 px-2">
+                                                <label for="inp-email" class="form-label">Email</label>
+                                                <span style="color:#ff0000">*</span>
+                                                <input id="inp-email" type="text" class=" shadow-sm focus:ring-primary focus:border-primary block w-full
+                                                sm:text-sm border-gray-300 rounded-md dark:bg-darkmode-800"
+                                                    placeholder="example@uwu.ac.lk">
+                                            </div>
+                                            <div class="relative mt-3 px-2">
+                                                <label for="inp-type" class="form-label">Select Faculty</label>
+                                                <span style="color:#ff0000">*</span>
+                                                <select id="inp-type"
+                                                    class="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm border-gray-300 rounded-md dark:bg-darkmode-800">
+                                                    <option selected hidden>Select Faculty</option>
+                                                    <option value="01">Faculty 01</option>
+                                                    <option value="02">Faculty 02</option>
+                                                    <option value="03">Faculty 03</option>
+                                                </select>
+                                            </div>
+                                            <div class="relative mt-3 px-2">
+                                                <label for="inp-type" class="form-label">Select Degree Programm</label>
+                                                <span style="color:#ff0000">*</span>
+                                                <select id="inp-type"
+                                                    class="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm border-gray-300 rounded-md dark:bg-darkmode-800">
+                                                    <option selected hidden>Select Degree</option>
+                                                    <option value="01">Degree 01</option>
+                                                    <option value="02">Degree 02</option>
+                                                    <option value="03">Degree 03</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 text-left">
+
+                                        </div>
+                                        <div class="intro-y col-span-12 flex justify-end sm:justify-end mt-5">
+                                            <button class="btn btn-primary w-24 ml-2" type="submit">Update</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- privacy tab -->
+                <div class="intro-y tab-content mt-5">
+                    <div id="profile" class="tab-pane active" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="grid grid-cols-12 gap-6">
+                            <div class="intro-y box col-span-12 lg:col-span-12">
+                                <div
+                                    class="flex items-center px-5 py-5 sm:py-3 border-b border-slate-200/60 dark:border-darkmode-400">
+                                    <h2 class="font-medium text-base mr-auto">
+                                        Change Password
+                                    </h2>
+                                </div>
+                                <form action="">
+                                    <div class="p-5">
+                                        <div class="grid grid-cols-12 gap-4 gap-y-5 mt-5">
+                                            <div class="intro-y col-span-6 sm:col-span-6">
+                                                <label for="input-password"
+                                                    class="text-sm font-medium text-gray-700 dark:text-gray-400 mb-1 flex">New
+                                                    Password
+                                                </label>
+                                                <input type="password" id="input-password" class="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm
+                                                border-gray-300 rounded-md dark:bg-darkmode-800"
+                                                    placeholder="Your New Password Here">
+                                            </div>
+                                            <div class="intro-y col-span-6 sm:col-span-6">
+                                                <label for="input-confirm-password"
+                                                    class="text-sm font-medium text-gray-700 dark:text-gray-400 mb-1 flex">Confirm
+                                                    Password
+                                                </label>
+                                                <input type="password" id="input-confirm-password" class="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm
+                                                border-gray-300 rounded-md dark:bg-darkmode-800"
+                                                    placeholder="Your Confirm Password Here">
+                                            </div>
+                                            <div class="intro-y col-span-12 flex justify-end sm:justify-end mt-5">
+                                                <button class="btn btn-primary w-24 ml-2" type="submit">Update</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Address -->
+                <div class="intro-y tab-content mt-5">
+                    <div id="#view"" class=" tab-pane active" role="tabpanel" aria-labelledby="dashboard-tab">
+                        <div class="grid grid-cols-12 gap-6">
+                            <div class="intro-y box col-span-12">
+                                <div
+                                    class="flex items-center px-5 py-5 sm:py-3 border-b border-slate-200/60 dark:border-darkmode-400">
+                                    <h2 class="font-medium text-base mr-auto">
+                                        Address
+                                    </h2>
+                                </div>
+                                <div class="gap-6 p-5">
+                                    <form action="">
+                                        <div class="grid grid-cols-2 sm:grid-cols-2">
+                                            <div class="col-span-2 sm:col-span-2 mt-2 px-2">
+                                                <label for="inp-primaryAddress-street_address"
+                                                    class="form-label">Street</label>
+                                                <span style="color:#ff0000">*</span>
+                                                <input id="inp-primaryAddress-street_address" type="text"
+                                                    class="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm border-gray-300 rounded-md dark:bg-darkmode-800"
+                                                    placeholder="Street">
+                                            </div>
+                                            <div class="col-span-2 sm:col-span-2 mt-2 px-2">
+                                                <label for="inp-primaryAddress-line_two" class="form-label">Line
+                                                    two</label>
+                                                <input id="inp-primaryAddress-line_two" type="text"
+                                                    class="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm border-gray-300 rounded-md dark:bg-darkmode-800"
+                                                    placeholder="Line two">
+                                            </div>
+                                            <div class="col-span-1 sm:col-span-2 mt-2 px-2">
+                                                <label for="inp-primaryAddress-city" class="form-label">City</label>
+                                                <span style="color:#ff0000">*</span>
+                                                <input id="inp-primaryAddress-city" type="text"
+                                                    class="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm border-gray-300 rounded-md dark:bg-darkmode-800"
+                                                    placeholder="City">
+                                            </div>
+                                            <div class="col-span-1 sm:col-span-2 mt-2 px-2">
+                                                <label for="inp-primaryAddress-state" class="form-label">State</label>
+                                                <span style="color:#ff0000">*</span>
+                                                <input id="inp-primaryAddress-state" type="text"
+                                                    class="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm border-gray-300 rounded-md dark:bg-darkmode-800"
+                                                    placeholder="State">
+                                            </div>
+                                            <div class="col-span-1 sm:col-span-2 mt-2 px-2">
+                                                <label for="inp-primaryAddress-country"
+                                                    class="form-label">Country</label>
+                                                <span style="color:#ff0000">*</span>
+                                                <input id="inp-primaryAddress-country" type="text"
+                                                    class="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm border-gray-300 rounded-md dark:bg-darkmode-800"
+                                                    placeholder="Country">
+                                            </div>
+                                            <div class="col-span-1 sm:col-span-2 mt-2 px-2">
+                                                <label for="inp-primaryAddress-zip_code"
+                                                    class="form-label">Zip-Code</label>
+                                                <span style="color:#ff0000">*</span>
+                                                <input id="inp-primaryAddress-zip_code" type="text"
+                                                    class="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm border-gray-300 rounded-md dark:bg-darkmode-800"
+                                                    placeholder="Zip-Code">
+                                            </div>
+                                        </div>
+                                        <div class="intro-y col-span-12 flex justify-end sm:justify-end mt-5">
+                                            <button class="btn btn-primary w-24 ml-2" type="submit">Update</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- END: Content -->
+        </div>
+
+        <!-- BEGIN: JS Assets-->
+        <script
+            src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=[" your-google-map-api"]&libraries=places"></script>
+        <script src="dist/js/app.js"></script>
+        <!-- END: JS Assets-->
+</body>
+
+</html>
