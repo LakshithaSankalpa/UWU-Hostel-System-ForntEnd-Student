@@ -150,10 +150,38 @@
                         <div class="w-20 h-20 sm:w-24 sm:h-24 flex-none lg:w-32 lg:h-32 image-fit relative">
                             <img alt="Midone - HTML Admin Template" class="rounded-full"
                                 src="dist/images/profile-15.jpg">
-                            <div
-                                class="absolute mb-1 mr-1 flex items-center justify-center bottom-0 right-0 bg-primary rounded-full p-2">
-                                <i class="w-4 h-4 text-white" data-lucide="camera"></i>
+
+                            <!-- BEGIN: Modal Toggle -->
+                            <a href="javascript:;" data-tw-toggle="modal" data-tw-target="#button-modal-preview">
+                                <div
+                                    class="absolute mb-1 mr-1 flex items-center justify-center bottom-0 right-0 bg-primary rounded-full p-2">
+                                    <i class="w-4 h-4 text-white" data-lucide="camera"></i>
+                                </div>
+                            </a>
+                            <!-- END: Modal Toggle -->
+                            <!-- BEGIN: Modal Content -->
+                            <div id="button-modal-preview" class="modal" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content"> <a data-tw-dismiss="modal" href="javascript:;"> <i
+                                                data-lucide="x" class="w-8 h-8 text-slate-400"></i> </a>
+                                        <div class="modal-body p-0">
+                                            <div class="p-5 text-center"> <i data-lucide="image"
+                                                    class="w-16 h-16 text-success mx-auto mt-3"></i>
+                                                <div class="text-3xl mt-5">Profile Image</div>
+                                                <label for="formFile"
+                                                    class="form-label font-medium inline-block mb-2 text-gray-700">Upload</label>
+                                                <input
+                                                    class="form-control dropify block w-full px-3 py-1.5 text-base font-normal  text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300  rounded  transition ease-in-out  m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                                    wire:model="articleImage" type="file" id="formFile">
+                                            </div>
+                                            <div class="px-5 pb-8 text-center"> <button type="button"
+                                                    data-tw-dismiss="modal" class="btn btn-primary w-24">upload</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            <!-- END: Modal Content -->
                         </div>
                         <div class="ml-5">
                             <div class="w-24 sm:w-40 truncate sm:whitespace-normal font-medium text-lg">Student Name
