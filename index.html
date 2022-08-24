@@ -206,22 +206,24 @@
                 </div>
                 <ul class="nav nav-link-tabs flex-col sm:flex-row justify-center lg:justify-start text-center"
                     role="tablist">
-                    <li id="info-tab" class="nav-item" role="presentation"> <a href="javascript:;"
-                            class="nav-link py-4 active" data-tw-target="#info" aria-controls="info"
-                            aria-selected="true" role="tab"> Profile Info </a> </li>
-                    <li id="privacy-tab" class="nav-item" role="presentation"> <a href="javascript:;"
-                            class="nav-link py-4" data-tw-target="#privacy" aria-selected="false" role="tab">
-                            Privacy</a> </li>
-                    <li id="hostels-tab" class="nav-item" role="presentation"> <a href="javascript:;"
-                            class="nav-link py-4" data-tw-target="#hostels" aria-selected="false" role="tab">
-                            Address </a> </li>
+                    <li id="tab-profile-info" class="nav-item" role="presentation"> <button
+                            class="nav-link w-full py-4 active" data-tw-toggle="pill" data-tw-target="#profile-info-tab"
+                            type="button" role="tab" aria-controls="profile-info-tab" aria-selected="true"> Profile Info
+                        </button> </li>
+                    <li id="tab-privacy" class="nav-item" role="presentation"> <button class="nav-link w-full py-4"
+                            data-tw-toggle="pill" data-tw-target="#privacy-tab" type="button" role="tab"
+                            aria-controls="privacy-tab" aria-selected="false"> Privacy
+                        </button> </li>
+                    <li id="tab-address" class="nav-item" role="presentation"> <button class="nav-link w-full py-4"
+                            data-tw-toggle="pill" data-tw-target="#address-tab" type="button" role="tab"
+                            aria-controls="address-tab" aria-selected="false"> Address
+                        </button> </li>
                 </ul>
-
-
                 <!-- END: Profile Info -->
-                <!-- info tab -->
                 <div class="intro-y tab-content mt-5">
-                    <div id="#view"" class=" tab-pane active" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <!-- info tab -->
+                    <div id="profile-info-tab" class=" tab-pane leading-relaxed active" role="tabpanel"
+                        aria-labelledby="tab-profile-info">
                         <div class="grid grid-cols-12 gap-6">
                             <div class="intro-y box col-span-12">
                                 <div
@@ -296,10 +298,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- privacy tab -->
-                <div class="intro-y tab-content mt-5">
-                    <div id="profile" class="tab-pane active" role="tabpanel" aria-labelledby="profile-tab">
+                    <!-- privacy tab -->
+                    <div id="privacy-tab" class="tab-pane leading-relaxed" role="tabpanel"
+                        aria-labelledby="tab-privacy">
                         <div class="grid grid-cols-12 gap-6">
                             <div class="intro-y box col-span-12 lg:col-span-12">
                                 <div
@@ -338,10 +339,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Address -->
-                <div class="intro-y tab-content mt-5">
-                    <div id="#view"" class=" tab-pane active" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <!-- Address -->
+                    <div id="address-tab" class=" tab-pane leading-relaxed" role="tabpanel"
+                        aria-labelledby="tab-address">
                         <div class="grid grid-cols-12 gap-6">
                             <div class="intro-y box col-span-12">
                                 <div
